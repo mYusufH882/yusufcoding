@@ -61,7 +61,7 @@ var dataPortfolio = {
         },
         {
             "judul": "Peta Dakwah Digital Pemuda Persis",
-            "deskripsi": "Web peta dakwah digital atau sistem informasi gis untuk memetakan profil anggota pemuda persis di kota cimahi",
+            "deskripsi": "Web peta dakwah digital atau sistem informasi GIS (Geolocation Information System) untuk memetakan profil anggota pemuda persis di kota cimahi",
             "thumbnail": "Peta-Dakwah.png",
             "gambar": [
                 "Peta-Dakwah.png"
