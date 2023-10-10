@@ -17,9 +17,8 @@
         type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/portfolio.js"></script>
-    <script src="js/sertifikat.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body id="page-top">
@@ -63,12 +62,8 @@
             <div class="row">
                 <div class="col-md ms-auto">
                     <p class="lead">
-                        Saya adalah seorang fresh graduate dari STMIK AMIKBANDUNG yang memiliki semangat tinggi dalam
-                        belajar hal baru, motivasi yang tinggi terhadap pekerjaan (growth mindset) dan memiliki atitude
-                        yang baik.
-                        Berpengalaman dibidang nya selama 3 tahun di 2 perusahaan teknologi dengan berperan sebagai web
-                        developer khususnya dibagian backend programmer dengan menggunakan bahasa pemrograman &
-                        framework PHP (Laravel) & JavaScript (JQuery, dll).
+                        I'm a web developer work has experienced a freelancer and employees in tech companies. Now i'm
+                        currently have a 4 years as a web developer as especially backend developer.
                     </p>
                 </div>
                 <!-- About Section Button-->
@@ -100,7 +95,7 @@
                             <div class="portfolio-item-caption-content text-center text-white"><i
                                     class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" src="assets/img/portfolio/`+ item.thumbnail + `" alt="Portfolio" />
+                        <img class="img-fluid" src="assets/img/portfolio/`+ item.thumbnail + `" alt="..." />
                     </div>
                 </div>`;
 
@@ -126,64 +121,11 @@
             <div class="row" id="boxPort">
             </div>
             <div id="boxModal"></div>
-            <!-- Portfolio Modals-->
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    const boxContainer = $("#boxModal");
-
-                    var no = 0;
-                    dataPortfolio.projek.forEach((item) => {
-                        no++;
-
-                        const portfolioItem = `<div class="portfolio-modal modal fade" id="portfolioModal` + no + `" tabindex="-1" aria-labelledby="portfolioModal6"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                                    aria-label="Close"></button></div>
-                            <div class="modal-body text-center pb-5">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8">
-                                            <!-- Portfolio Modal - Title-->
-                                            <p class="portfolio-modal-title text-secondary text-uppercase mb-0">`+ item.judul + `</p>
-                                            <!-- Icon Divider-->
-                                            <div class="divider-custom">
-                                                <div class="divider-custom-line"></div>
-                                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                                <div class="divider-custom-line"></div>
-                                            </div>
-                                            <!-- Portfolio Modal - Image-->
-                                            <img class="img-fluid rounded mb-5" src="assets/img/portfolio/`+ item.gambar + `" alt="portofolio" style="width:750px;" />
-                                            <!-- Portfolio Modal - Text-->
-                                            <p class="mb-4">
-                                                `+ item.deskripsi + `
-                                            </p>
-                                            <button class="btn btn-primary" data-bs-dismiss="modal">
-                                                <i class="fas fa-xmark fa-fw"></i>
-                                                Close Window
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
-
-                        // Tambahkan elemen HTML untuk item proyek ke elemen HTML untuk container proyek.
-                        boxContainer.append(portfolioItem);
-                    });
-
-                    var year = new Date();
-                    $('#year').append(year.getFullYear());
-                });
-            </script>
         </div>
     </section>
 
     <!-- Certificate Section-->
-    <section class="page-section bg-primary text-white mb-0 portfolio" id="certificate">
+    <section class="page-section bg-primary text-white mb-0" id="certificate">
         <div class="container">
             <!-- Certificate Section Heading-->
             <h2 class="page-section-heading text-center text-uppercase text-white">Sertifikat</h2>
@@ -193,83 +135,6 @@
                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                 <div class="divider-custom-line"></div>
             </div>
-            <div class="row" id="showCertif"></div>
-            <script>
-                $(document).ready(function () {
-                    const container = $("#showCertif");
-
-                    var no = 0;
-                    dataSertifikat.sertifikat.forEach((item) => {
-                        no++;
-                        const sertifikatItem = `<div class="col-md-6 col-lg-4 mb-5">
-                                <h5 class="text-center">`+ item.nama_sertifikat + `</h5>
-
-                                <div class=" portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#sertifikatModal`+ no + `">
-                                    <div
-                                        class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                        <div class="portfolio-item-caption-content text-center text-white"><i
-                                                class="fas fa-plus fa-3x"></i></div>
-                                    </div>
-                                    <img class="img-fluid" src="assets/img/sertifikat/`+ item.sertifikat + `" alt="Sertifikat" />
-                                </div>
-                            </div>`;
-
-                        // Tambahkan elemen HTML untuk item proyek ke elemen HTML untuk container proyek.
-                        container.append(sertifikatItem);
-                    });
-                });
-            </script>
-            <div id="modalSertifikat"></div>
-            <!-- Portfolio Modals-->
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    const boxContainer = $("#modalSertifikat");
-
-                    var no = 0;
-                    dataSertifikat.sertifikat.forEach((item) => {
-                        no++;
-
-                        const sertifikatItem = `<div class="portfolio-modal modal fade" id="sertifikatModal` + no + `" tabindex="-1" aria-labelledby="sertifikatModal6"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                                            aria-label="Close"></button></div>
-                                    <div class="modal-body text-center pb-5">
-                                        <div class="container">
-                                            <div class="row justify-content-center">
-                                                <div class="col-lg-8">
-                                                    <!-- Portfolio Modal - Title-->
-                                                    <p class="portfolio-modal-title text-secondary text-uppercase mb-0">`+ item.nama_sertifikat + `</p>
-                                                    <!-- Icon Divider-->
-                                                    <div class="divider-custom">
-                                                        <div class="divider-custom-line"></div>
-                                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                                        <div class="divider-custom-line"></div>
-                                                    </div>
-                                                    <!-- Portfolio Modal - Image-->
-                                                    <img class="img-fluid rounded mb-5" src="assets/img/sertifikat/`+ item.sertifikat + `" alt="Sertifikat" style="width:750px;" />
-                                                    <!-- Portfolio Modal - Text-->
-                                                    <p class="mb-4 text-dark">
-                                                        `+ item.deskripsi + `
-                                                    </p>
-                                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                                        <i class="fas fa-xmark fa-fw"></i>
-                                                        Close Window
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>`;
-
-                        // Tambahkan elemen HTML untuk item proyek ke elemen HTML untuk container proyek.
-                        boxContainer.append(sertifikatItem);
-                    });
-                });
-            </script>
         </div>
     </section>
 
@@ -315,6 +180,59 @@
     <div class="copyright py-4 text-center text-white">
         <div class="container"><small>Copyright &copy; mYusufH882 <span id="year"></span></small></div>
     </div>
+    <!-- Portfolio Modals-->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            const boxContainer = $("#boxModal");
+
+            var no = 0;
+            dataPortfolio.projek.forEach((item) => {
+                no++;
+
+                const portfolioItem = `<div class="portfolio-modal modal fade" id="portfolioModal` + no + `" tabindex="-1" aria-labelledby="portfolioModal6"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                                    aria-label="Close"></button></div>
+                            <div class="modal-body text-center pb-5">
+                                <div class="container">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8">
+                                            <!-- Portfolio Modal - Title-->
+                                            <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">`+ item.judul + `</h2>
+                                            <!-- Icon Divider-->
+                                            <div class="divider-custom">
+                                                <div class="divider-custom-line"></div>
+                                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                                <div class="divider-custom-line"></div>
+                                            </div>
+                                            <!-- Portfolio Modal - Image-->
+                                            <img class="img-fluid rounded mb-5" src="assets/img/portfolio/`+ item.gambar + `" alt="..." />
+                                            <!-- Portfolio Modal - Text-->
+                                            <p class="mb-4">
+                                                `+ item.deskripsi + `
+                                            </p>
+                                            <button class="btn btn-primary" data-bs-dismiss="modal">
+                                                <i class="fas fa-xmark fa-fw"></i>
+                                                Close Window
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+
+                // Tambahkan elemen HTML untuk item proyek ke elemen HTML untuk container proyek.
+                boxContainer.append(portfolioItem);
+            });
+
+            var year = new Date();
+            $('#year').append(year.getFullYear());
+        });
+    </script>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
