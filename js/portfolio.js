@@ -19,7 +19,7 @@ var dataPortfolio = {
             ]
         },
         {
-            "judul": "Chimasistaker v2",
+            "judul": "Chima Sistem Informasi Manajemen Ketenagakerjaan (Chimasistaker) v2",
             "deskripsi": "Web disnaker untuk portal informasi pekerjaan kepada pencari kerja di kota cimahi",
             "thumbnail": "Disnaker.png",
             "gambar": [
@@ -81,6 +81,14 @@ var dataPortfolio = {
             "thumbnail": "Admin-Dashboard-Kinerja-BSC.png",
             "gambar": [
                 "Admin-Dashboard-Kinerja-BSC.png"
+            ]
+        },
+        {
+            "judul": "Pelacak Alumni (Tracer Study)",
+            "deskripsi": "Aplikasi Pelacak alumni (Tracer Study) merupakan aplikasi yang mengelola minat dan bakat para siswa dan alumni terkait keputusan mereka di masa depan dalam hal pendidikan atau pekerjaan.",
+            "thumbnail": "Tracer-Study.png",
+            "gambar": [
+                "Tracer-Study.png"
             ]
         }
     ]
