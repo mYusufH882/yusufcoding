@@ -1,13 +1,10 @@
 var dataPortfolio = {
     "projek": [
         {
-            "judul": "Event CSRG (Computer Security Research Group)",
-            "deskripsi": "Web untuk menampilkan informasi acara CSRG di kampus STMIK AMIKBANDUNG.",
-            "thumbnail": "Web Event CSRG.png",
-            "gambar": [
-                "Web Event CSRG.png",
-                // "Admin-CSRG.png"
-            ]
+            "judul": "Adopsi Teknologi Digital Sektor Pendidikan",
+            "deskripsi": "Web informasi milik Kominfo untuk sektor pendidikan terhadap teknologi digital saat ini.",
+            "thumbnail": "Adopsi-Teknologi-Digital-Sektor-Pendidikan.png",
+            "gambar": "Adopsi-Teknologi-Digital-Sektor-Pendidikan.png"
         },
         {
             "judul": "CaiKopi (Capaian Kinerja Koperasi)",
@@ -26,28 +23,27 @@ var dataPortfolio = {
                 "Disnaker.png"
             ]
         },
-        // {
-        //     "judul": "Chimasistaker v2 Dashboard",
-        //     "deskripsi": "Dashboard admin untuk mengelola data pencari kerja kota cimahi.",
-        //     "thumbnail": "Chimasistaker Dashboard.png",
-        //     "gambar": [
-        //         "Chimasistaker Dashboard.png"
-        //     ]
-        // },
-        // {
-        //     "judul": "Inovasi Dashboard",
-        //     "deskripsi": "Dashboard admin untuk mengelola data inovasi di kota cimahi",
-        //     "thumbnail": "Web Inovasi Dashboard.png",
-        //     "gambar": [
-        //         "Web Inovasi Dashboard.png"
-        //     ]
-        // },
         {
             "judul": "Landing Page Web Chima Award",
             "deskripsi": "Landing page informasi inovasi dari kota Cimahi.",
             "thumbnail": "Chima Awards 2022.png",
             "gambar": [
                 "Chima Awards 2022.png"
+            ]
+        },
+        {
+            "judul": "Monefy (Simple Tracking Financial App)",
+            "deskripsi": "Web sederhana untuk menampilkan dashboard pelacakan uang masuk dan keluar interaktif yang disertai dengan voice to text.",
+            "thumbnail": "Monefy.png",
+            "gambar": "Monefy.png"
+        },
+        {
+            "judul": "Event CSRG (Computer Security Research Group)",
+            "deskripsi": "Web untuk menampilkan informasi acara CSRG di kampus STMIK AMIKBANDUNG.",
+            "thumbnail": "Web Event CSRG.png",
+            "gambar": [
+                "Web Event CSRG.png",
+                // "Admin-CSRG.png"
             ]
         },
         {
@@ -90,6 +86,12 @@ var dataPortfolio = {
             "gambar": [
                 "Tracer-Study.png"
             ]
+        },
+        {
+            "judul": "Sekolah Pedia",
+            "deskripsi": "Web informasi yang menyediakan informasi seputar sekolah swasta yang ada di kota Cimahi.",
+            "thumbnail": "Sekolahpedia.png",
+            "gambar": "Sekolahpedia.png"
         }
     ]
 }
