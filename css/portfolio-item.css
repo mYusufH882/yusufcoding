@@ -20,7 +20,7 @@
     height: 200px; /* Set height to ensure consistent size */
     overflow: hidden;
 }
-
+    
 .portfolio-item img {
     object-fit: cover;
     width: 100%;

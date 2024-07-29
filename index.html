@@ -22,6 +22,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/portfolio.js"></script>
     <script src="js/sertifikat.js"></script>
+    <script src="js/skill.js"></script>
     <script src="js/about.js"></script>
 </head>
 
@@ -42,6 +43,8 @@
                             href="#portfolio">Portofolio</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
                             href="#certificate">Sertifikat</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" 
+                            href="#skill">Skill</a></li>
                 </ul>
             </div>
         </div>
@@ -299,13 +302,84 @@
         </div>
     </section>
 
+    <!-- Skills -->
+    <section class="page-section portfolio" id="skill">
+        <div class="container">
+            <!-- Skill Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Skill</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <div class="col-md-12">
+                <div class="card-header mx-2">
+                    <h3>Profesional Skill</h3>
+                </div>
+                <script>
+                    const colorClasses = [
+                        'bg-primary', 'bg-secondary', 'bg-success', 'bg-danger', 'bg-warning', 'bg-info', 'bg-dark'
+                    ];
+
+                    function getRandomColor() {
+                        const randomIndex = Math.floor(Math.random() * colorClasses.length)
+                        return colorClasses[randomIndex]
+                    }
+
+                    function generateBadges(data) {
+                        return data.map((item) => {
+                            const randomColor = getRandomColor()
+                            return `<span class="badge ${randomColor} p-2 m-2">${item.text}</span>`;
+                        }).join(' ');
+                    }
+
+                    // Insert badges into the DOM
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const skillsContainer = document.getElementById('skillsContainer');
+                        const languagesContainer = document.getElementById('languagesContainer');
+                        
+                        // Add skill badges
+                        const skillBadges = generateBadges(varSkill.skill, 'bg-primary');
+                        skillsContainer.innerHTML = skillBadges;
+                        
+                        // Add language badges
+                        const languageBadges = generateBadges(varSkill.language, 'bg-success');
+                        languagesContainer.innerHTML = languageBadges;
+                    });
+                </script>
+                <div class="card-body d-flex flex-wrap justify-content-between">
+                    <div class="col-md-8" id="skillsContainer">
+                        <!-- <span class="badge bg-primary p-2">Agile Scrum Development</span>
+                        <span class="badge bg-secondary p-2">Team Leadership</span>
+                        <span class="badge bg-success p-2">Komunikasi</span>
+                        <span class="badge bg-danger p-2">Problem Solving</span>
+                        <span class="badge bg-warning p-2">Manajemen Waktu</span> -->
+                    </div>
+                </div>
+                <div class="card-header">
+                    <h3>Bahasa Pemrograman</h3>
+                </div>
+                <div class="card-body d-flex flex-wrap justify-content-between">
+                    <div class="col-md-8" id="languagesContainer">
+                        <!-- <span class="badge bg-success p-2">PHP (Laravel/Codeigniter 3/Native)</span>
+                        <span class="badge bg-warning p-2">Javascript (Node/Express/VueJS)</span>
+                        <span class="badge bg-dark p-2">PostgreSQL/MySQL</span>
+                        <span class="badge bg-primary p-2">Postman API</span>
+                        <span class="badge bg-secondary p-2">Github & Gitlab</span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer-->
     <footer class="footer text-center">
         <div class="container">
             <div class="row">
                 <!-- Footer Location-->
                 <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Location</h4>
+                    <h4 class="text-uppercase mb-4">Lokasi</h4>
                     <p class="lead mb-0">
                         Jl. Citopeng Sari RT 02 RW 22
                         <br />
@@ -314,7 +388,7 @@
                 </div>
                 <!-- Footer Social Icons-->
                 <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Around the Web</h4>
+                    <h4 class="text-uppercase mb-4">Website</h4>
                     <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/mYusufH882/"
                         target="_blank"><i class="fab fa-fw fa-github"></i></a>
                     <a class="btn btn-outline-light btn-social mx-1"
@@ -329,7 +403,7 @@
                 </div>
                 <!-- Footer About Text-->
                 <div class="col-lg-4">
-                    <h4 class="text-uppercase mb-4">Contact Me</h4>
+                    <h4 class="text-uppercase mb-4">Kontak Saya</h4>
                     <p class="lead mb-0">
                         +62-821-1529-9534
                         myusufh882@gmail.com

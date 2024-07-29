@@ -47,7 +47,9 @@ var dataPortfolio = {
             "judul": "Sekolah Pedia",
             "deskripsi": "Web informasi yang menyediakan informasi seputar sekolah swasta yang ada di kota Cimahi. Aplikasi ini dikembangkan dengan arsitektur monolith backend menggunakan Laravel",
             "thumbnail": "Sekolahpedia.png",
-            "gambar": "Sekolahpedia.png"
+            "gambar": [
+                "Sekolahpedia.png"
+            ]
         },
         {
             "judul": "Chima Sistem Informasi Manajemen Ketenagakerjaan (Chimasistaker) v2",
@@ -69,7 +71,9 @@ var dataPortfolio = {
             "judul": "Adopsi Teknologi Digital Sektor Pendidikan",
             "deskripsi": "Web informasi milik Kominfo untuk sektor pendidikan terhadap teknologi digital saat ini. Aplikasi ini dikembangkan dengan arsitektur monolith backend menggunakan Laravel",
             "thumbnail": "Adopsi-Teknologi-Digital-Sektor-Pendidikan.png",
-            "gambar": "Adopsi-Teknologi-Digital-Sektor-Pendidikan.png"
+            "gambar": [
+                "Adopsi-Teknologi-Digital-Sektor-Pendidikan.png"
+            ]
         },
         {
             "judul": "Penilaian Kinerja Karyawan Balanced Scorecard (BSC)",
@@ -83,7 +87,9 @@ var dataPortfolio = {
             "judul": "Monify (Simple Tracking Financial App)",
             "deskripsi": "Web sederhana untuk menampilkan dashboard pelacakan uang masuk dan keluar interaktif yang disertai dengan voice to text. Aplikasi ini dikembangkan dengan arsitektur monolith backend menggunakan Laravel",
             "thumbnail": "Monefy.png",
-            "gambar": "Monefy.png"
+            "gambar": [
+                "Monefy.png"
+            ]
         },
         {
             "judul": "Event CSRG (Computer Security Research Group)",
@@ -100,7 +106,7 @@ var dataPortfolio = {
             "thumbnail": "Web PemudaPersisCimsel.png",
             "gambar": [
                 "Web PemudaPersisCimsel.png",
-                "Admin PemudaPersisCimsel.png"
+                "AdminPemudaPersisCimsel.png"
             ]
         },
         {
@@ -109,6 +115,22 @@ var dataPortfolio = {
             "thumbnail": "Peta-Dakwah.png",
             "gambar": [
                 "Peta-Dakwah.png"
+            ]
+        },
+        {
+            "judul": "Talikuat Bimajabar",
+            "deskripsi": "Aplikasi manajemen monitoring infrastruktur jalan pemerintahan kota Bandung yang dibangun dengan Laravel pada arsitektur monolith.",
+            "thumbnail": "talikuat.png",
+            "gambar": [
+                "talikuat.png"
+            ]
+        },
+        {
+            "judul": "Tripisia",
+            "deskripsi": "Aplikasi pencari tempat destinasi wisata yang dibangun menggunakan Codeigniter 3 dengan arsitektur monolith.",
+            "thumbnail": "Tripisia.png",
+            "gambar": [
+                "Tripisia.png"
             ]
         },
     ]
