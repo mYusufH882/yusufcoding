@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>YusufCoding - Portfolio</title>
+    <title>My Portfolio</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -17,20 +17,16 @@
         type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/portfolio-item.css" rel="stylesheet">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/portfolio.js"></script>
     <script src="js/sertifikat.js"></script>
-    <script src="js/skill.js"></script>
-    <script src="js/about.js"></script>
 </head>
 
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top">YusufCoding</a>
+            <a class="navbar-brand" href="#page-top">My Portfolio</a>
             <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button"
                 data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -43,8 +39,6 @@
                             href="#portfolio">Portofolio</a></li>
                     <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded"
                             href="#certificate">Sertifikat</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" 
-                            href="#skill">Skill</a></li>
                 </ul>
             </div>
         </div>
@@ -64,30 +58,28 @@
                 <div class="divider-custom-line"></div>
             </div>
             <!-- Masthead Subheading-->
-            <p class="masthead-subheading font-weight-light">Web Developer - Backend/Frontend/Junior Fullstack</p>
+            <p class="masthead-subheading font-weight-light">Fullstack Web Developer</p>
             <!-- About Section Content-->
             <div class="row">
                 <div class="col-md ms-auto">
-                    <p class="lead text-center" id="about">
-                        <script>
-                            document.getElementById("about").innerText = tentang[1];
-                        </script>
+                    <p class="lead">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged.
+                        It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                        passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum.
                     </p>
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" 
-                        href="https://raw.githubusercontent.com/mYusufH882/yusufcoding/main/assets/data/CV_ATS_M_Yusuf_H.pdf"
+                    <a class="btn btn-xl btn-outline-light" href="/assets/data/CV_MUHAMMAD YUSUF HARYADI.pdf"
                         target="_blank">
                         <i class="fas fa-download me-2"></i>
                         Download My CV
-                    </a>
-                </div>
-                <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="https://www.linkedin.com/in/muhammad-yusuf-haryadi-2aa291198"
-                        target="_blank">
-                        <!-- <i class="fas fa-linkedin-in me-2"></i> -->
-                        Lihat Profil LinkedIn Saya
                     </a>
                 </div>
             </div>
@@ -114,7 +106,7 @@
                             <div class="portfolio-item-caption-content text-center text-white"><i
                                     class="fas fa-plus fa-3x"></i></div>
                         </div>
-                        <img class="img-fluid" width="500px" src="assets/img/portfolio/`+ item.thumbnail + `" alt="Portfolio" />
+                        <img class="img-fluid" src="assets/img/portfolio/`+ item.thumbnail + `" alt="Portfolio" />
                     </div>
                 </div>`;
 
@@ -138,75 +130,53 @@
             </div>
             <div id="boxModal"></div>
             <!-- Portfolio Modals-->
-            <script type="text/javascript">
+            <!-- <script type="text/javascript">
                 $(document).ready(function () {
                     const boxContainer = $("#boxModal");
-            
+
                     var no = 0;
                     dataPortfolio.projek.forEach((item) => {
                         no++;
-            
-                        // Generate carousel items
-                        let carouselItems = '';
-                        item.gambar.forEach((gambar, index) => {
-                            carouselItems += `
-                                <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                                    <img class="d-block w-100 img-fluid rounded mb-5" src="assets/img/portfolio/${gambar}" alt="portofolio">
-                                </div>`;
-                        });
-            
-                        const portfolioItem = `
-                            <div class="portfolio-modal modal fade" id="portfolioModal${no}" tabindex="-1" aria-labelledby="portfolioModal${no}Label" aria-hidden="true">
-                                <div class="modal-dialog modal-lg">
-                                    <div class="modal-content">
-                                        <div class="modal-header border-0">
-                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body text-center pb-5">
-                                            <div class="container">
-                                                <div class="row justify-content-center">
-                                                    <div class="col-lg-8">
-                                                        <!-- Portfolio Modal - Title-->
-                                                        <p class="portfolio-modal-title text-secondary text-uppercase mb-0">${item.judul}</p>
-                                                        <!-- Icon Divider-->
-                                                        <div class="divider-custom">
-                                                            <div class="divider-custom-line"></div>
-                                                            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                                            <div class="divider-custom-line"></div>
-                                                        </div>
-                                                        <!-- Portfolio Modal - Image-->
-                                                        <div id="carouselPortfolio${no}" class="carousel slide" data-bs-ride="carousel">
-                                                            <div class="carousel-inner">
-                                                                ${carouselItems}
-                                                            </div>
-                                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPortfolio${no}" data-bs-slide="prev">
-                                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                                <span class="visually-hidden">Previous</span>
-                                                            </button>
-                                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselPortfolio${no}" data-bs-slide="next">
-                                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                                <span class="visually-hidden">Next</span>
-                                                            </button>
-                                                        </div>
-                                                        <!-- Portfolio Modal - Text-->
-                                                        <p class="mb-4">${item.deskripsi}</p>
-                                                        <button class="btn btn-primary" data-bs-dismiss="modal">
-                                                            <i class="fas fa-xmark fa-fw"></i>
-                                                            Close Window
-                                                        </button>
+
+                        const portfolioItem = 
+                        `<div class="portfolio-modal modal fade" id="portfolioModal` + no + `" tabindex="-1" aria-labelledby="portfolioModal6"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
+                                            aria-label="Close"></button></div>
+                                    <div class="modal-body text-center pb-5">
+                                        <div class="container">
+                                            <div class="row justify-content-center">
+                                                <div class="col-lg-8">
+                                                    <p class="portfolio-modal-title text-secondary text-uppercase mb-0">`+ item.judul + `</p>
+                                                    <div class="divider-custom">
+                                                        <div class="divider-custom-line"></div>
+                                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                                        <div class="divider-custom-line"></div>
                                                     </div>
+                                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/`+ item.gambar + `" alt="portofolio" style="width:750px;" />
+                                                    <p class="mb-4">
+                                                        `+ item.deskripsi + `
+                                                    </p>
+                                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                                        <i class="fas fa-xmark fa-fw"></i>
+                                                        Close Window
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>`;
-            
-                        // Tambahkan elemen HTML untuk item proyek ke elemen HTML untuk container proyek.
+                            </div>
+                        </div>`;
+
                         boxContainer.append(portfolioItem);
                     });
                 });
-            </script>
+            </script> -->
+            
+            
             
         </div>
     </section>
@@ -302,93 +272,22 @@
         </div>
     </section>
 
-    <!-- Skills -->
-    <section class="page-section portfolio" id="skill">
-        <div class="container">
-            <!-- Skill Section Heading-->
-            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Skill</h2>
-            <!-- Icon Divider-->
-            <div class="divider-custom">
-                <div class="divider-custom-line"></div>
-                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                <div class="divider-custom-line"></div>
-            </div>
-            <div class="col-md-12">
-                <div class="card-header mx-2">
-                    <h3>Profesional Skill</h3>
-                </div>
-                <script>
-                    const colorClasses = [
-                        'bg-primary', 'bg-secondary', 'bg-success', 'bg-danger', 'bg-warning', 'bg-info', 'bg-dark'
-                    ];
-
-                    function getRandomColor() {
-                        const randomIndex = Math.floor(Math.random() * colorClasses.length)
-                        return colorClasses[randomIndex]
-                    }
-
-                    function generateBadges(data) {
-                        return data.map((item) => {
-                            const randomColor = getRandomColor()
-                            return `<span class="badge ${randomColor} p-2 m-2">${item.text}</span>`;
-                        }).join(' ');
-                    }
-
-                    // Insert badges into the DOM
-                    document.addEventListener('DOMContentLoaded', () => {
-                        const skillsContainer = document.getElementById('skillsContainer');
-                        const languagesContainer = document.getElementById('languagesContainer');
-                        
-                        // Add skill badges
-                        const skillBadges = generateBadges(varSkill.skill, 'bg-primary');
-                        skillsContainer.innerHTML = skillBadges;
-                        
-                        // Add language badges
-                        const languageBadges = generateBadges(varSkill.language, 'bg-success');
-                        languagesContainer.innerHTML = languageBadges;
-                    });
-                </script>
-                <div class="card-body d-flex flex-wrap justify-content-between">
-                    <div class="col-md-8" id="skillsContainer">
-                        <!-- <span class="badge bg-primary p-2">Agile Scrum Development</span>
-                        <span class="badge bg-secondary p-2">Team Leadership</span>
-                        <span class="badge bg-success p-2">Komunikasi</span>
-                        <span class="badge bg-danger p-2">Problem Solving</span>
-                        <span class="badge bg-warning p-2">Manajemen Waktu</span> -->
-                    </div>
-                </div>
-                <div class="card-header">
-                    <h3>Bahasa Pemrograman</h3>
-                </div>
-                <div class="card-body d-flex flex-wrap justify-content-between">
-                    <div class="col-md-8" id="languagesContainer">
-                        <!-- <span class="badge bg-success p-2">PHP (Laravel/Codeigniter 3/Native)</span>
-                        <span class="badge bg-warning p-2">Javascript (Node/Express/VueJS)</span>
-                        <span class="badge bg-dark p-2">PostgreSQL/MySQL</span>
-                        <span class="badge bg-primary p-2">Postman API</span>
-                        <span class="badge bg-secondary p-2">Github & Gitlab</span> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer-->
     <footer class="footer text-center">
         <div class="container">
             <div class="row">
                 <!-- Footer Location-->
                 <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Lokasi</h4>
+                    <h4 class="text-uppercase mb-4">Location</h4>
                     <p class="lead mb-0">
-                        Jl. Citopeng Sari RT 02 RW 22
+                        Jl. HMS Mintareja Sarjana Hukum
                         <br />
-                        Kel. Melong, Kec. Cimahi Selatan
+                        Baros, Kec. Cimahi Tengah, Kota Cimahi, Jawa Barat 40512
                     </p>
                 </div>
                 <!-- Footer Social Icons-->
                 <div class="col-lg-4 mb-5 mb-lg-0">
-                    <h4 class="text-uppercase mb-4">Website</h4>
+                    <h4 class="text-uppercase mb-4">Around the Web</h4>
                     <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/mYusufH882/"
                         target="_blank"><i class="fab fa-fw fa-github"></i></a>
                     <a class="btn btn-outline-light btn-social mx-1"
@@ -403,10 +302,9 @@
                 </div>
                 <!-- Footer About Text-->
                 <div class="col-lg-4">
-                    <h4 class="text-uppercase mb-4">Kontak Saya</h4>
+                    <h4 class="text-uppercase mb-4">Contact Me</h4>
                     <p class="lead mb-0">
                         +62-821-1529-9534
-                        myusufh882@gmail.com
                     </p>
                 </div>
             </div>
