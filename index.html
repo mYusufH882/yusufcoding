@@ -59,7 +59,7 @@
                 <div class="divider-custom-line"></div>
             </div>
             <!-- Masthead Subheading-->
-            <p class="masthead-subheading font-weight-light">Web Developer - Backend</p>
+            <p class="masthead-subheading font-weight-light">Web Developer - Backend/Frontend/Junior Fullstack</p>
             <!-- About Section Content-->
             <div class="row">
                 <div class="col-md ms-auto">
@@ -71,10 +71,18 @@
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="/assets/data/CV_MUHAMMAD YUSUF HARYADI.pdf"
+                    <a class="btn btn-xl btn-outline-light" 
+                        href="/assets/data/CV_ATS_M_Yusuf_H.pdf"
                         target="_blank">
                         <i class="fas fa-download me-2"></i>
                         Download My CV
+                    </a>
+                </div>
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="https://www.linkedin.com/in/muhammad-yusuf-haryadi-2aa291198"
+                        target="_blank">
+                        <!-- <i class="fas fa-linkedin-in me-2"></i> -->
+                        Lihat Profil LinkedIn Saya
                     </a>
                 </div>
             </div>
@@ -128,52 +136,73 @@
             <script type="text/javascript">
                 $(document).ready(function () {
                     const boxContainer = $("#boxModal");
-
+            
                     var no = 0;
                     dataPortfolio.projek.forEach((item) => {
                         no++;
-
-                        const portfolioItem = `<div class="portfolio-modal modal fade" id="portfolioModal` + no + `" tabindex="-1" aria-labelledby="portfolioModal6"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal"
-                                    aria-label="Close"></button></div>
-                            <div class="modal-body text-center pb-5">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-                                        <div class="col-lg-8">
-                                            <!-- Portfolio Modal - Title-->
-                                            <p class="portfolio-modal-title text-secondary text-uppercase mb-0">`+ item.judul + `</p>
-                                            <!-- Icon Divider-->
-                                            <div class="divider-custom">
-                                                <div class="divider-custom-line"></div>
-                                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                                <div class="divider-custom-line"></div>
+            
+                        // Generate carousel items
+                        let carouselItems = '';
+                        item.gambar.forEach((gambar, index) => {
+                            carouselItems += `
+                                <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                                    <img class="d-block w-100 img-fluid rounded mb-5" src="assets/img/portfolio/${gambar}" alt="portofolio">
+                                </div>`;
+                        });
+            
+                        const portfolioItem = `
+                            <div class="portfolio-modal modal fade" id="portfolioModal${no}" tabindex="-1" aria-labelledby="portfolioModal${no}Label" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header border-0">
+                                            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-center pb-5">
+                                            <div class="container">
+                                                <div class="row justify-content-center">
+                                                    <div class="col-lg-8">
+                                                        <!-- Portfolio Modal - Title-->
+                                                        <p class="portfolio-modal-title text-secondary text-uppercase mb-0">${item.judul}</p>
+                                                        <!-- Icon Divider-->
+                                                        <div class="divider-custom">
+                                                            <div class="divider-custom-line"></div>
+                                                            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                                            <div class="divider-custom-line"></div>
+                                                        </div>
+                                                        <!-- Portfolio Modal - Image-->
+                                                        <div id="carouselPortfolio${no}" class="carousel slide" data-bs-ride="carousel">
+                                                            <div class="carousel-inner">
+                                                                ${carouselItems}
+                                                            </div>
+                                                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPortfolio${no}" data-bs-slide="prev">
+                                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                                <span class="visually-hidden">Previous</span>
+                                                            </button>
+                                                            <button class="carousel-control-next" type="button" data-bs-target="#carouselPortfolio${no}" data-bs-slide="next">
+                                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                                <span class="visually-hidden">Next</span>
+                                                            </button>
+                                                        </div>
+                                                        <!-- Portfolio Modal - Text-->
+                                                        <p class="mb-4">${item.deskripsi}</p>
+                                                        <button class="btn btn-primary" data-bs-dismiss="modal">
+                                                            <i class="fas fa-xmark fa-fw"></i>
+                                                            Close Window
+                                                        </button>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <!-- Portfolio Modal - Image-->
-                                            <img class="img-fluid rounded mb-5" src="assets/img/portfolio/`+ item.gambar + `" alt="portofolio" style="width:750px;" />
-                                            <!-- Portfolio Modal - Text-->
-                                            <p class="mb-4">
-                                                `+ item.deskripsi + `
-                                            </p>
-                                            <button class="btn btn-primary" data-bs-dismiss="modal">
-                                                <i class="fas fa-xmark fa-fw"></i>
-                                                Close Window
-                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
-
+                            </div>`;
+            
                         // Tambahkan elemen HTML untuk item proyek ke elemen HTML untuk container proyek.
                         boxContainer.append(portfolioItem);
                     });
                 });
             </script>
+            
         </div>
     </section>
 
